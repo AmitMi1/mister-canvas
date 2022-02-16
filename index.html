@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body onload="onInit()">
+    <div class="options-container">
+        <input class="color" value="#FF0000" type="color" name="color">
+        <input class="size" type="range" name="size" min="10" max="150" value="50">
+        <select name="shapes" id="shapes" onchange="setShape()">
+            <option selected value="rect">SQUARES</option>
+            <option value="arc">CIRCLES</option>
+            <option value="triangle">TRIANGLES</option>
+            <option value="line">LINES</option>
+        </select>
+        <button class="save"> <a onclick="downloadCanvas(this)" style="text-decoration: none; color: black;" href="#"> SAVE</a></button>
+        <button class="clear" onclick="clearCanvas()">CLEAR</button>
+        <button class="upload" onclick="uploadImg()">UPLOAD</button>
+        <button style="visibility: hidden;" class="share" onclick=""><div class="share-container">SHARE</div></button>
+
+    </div>
+    <div class="canvas-container">
+        <canvas onclick="draw(event)" style="outline:1px solid rgb(0, 0, 0)"></canvas>
+    </div>
+
+    <script src="/js/services/circle.service.js"></script>
+    <script src="/js/services/upload.service.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+
+</html>

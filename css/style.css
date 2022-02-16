@@ -1,0 +1,62 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    min-height: 100vh;
+    display: flex;
+    background-color: #888888;
+    cursor: grab;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.canvas-container {
+    width: 90vw;
+    height: 80vh;
+    /* margin: 0 auto; */
+}
+
+canvas {
+    background-color: white;
+    border-radius: 30px;
+}
+
+.options-container {
+    margin-bottom: 10px;
+    display: grid;
+    grid-template: 1fr 1fr/ 1fr 1fr 1fr 1fr;
+    grid-template-areas: "clr size size shape  " "save clear  upload share";
+}
+
+.options-container>* {
+    cursor: pointer;
+    margin: 20px auto 0px;
+}
+
+.options-container .save {
+    grid-area: save;
+}
+
+.options-container .share {
+    grid-area: share;
+}
+
+.options-container .clear {
+    grid-area: clear;
+}
+
+.options-container .upload {
+    grid-area: upload;
+}
+
+.options-container .color {
+    grid-area: clr;
+}
+
+.options-container .size {
+    grid-area: size;
+}
+
+.options-container .shape {
+    grid-area: shape;
+}
