@@ -13,7 +13,6 @@ body {
 .canvas-container {
     width: 90vw;
     height: 80vh;
-    /* margin: 0 auto; */
 }
 
 canvas {
@@ -59,4 +58,13 @@ canvas {
 
 .options-container .shape {
     grid-area: shape;
+}
+
+@media (max-width: 500px) {
+    body {
+        min-height: 80vh;
+    }
+    .canvas-container {
+        height: 60vh;
+    }
 }
