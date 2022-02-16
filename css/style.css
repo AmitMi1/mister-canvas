@@ -62,9 +62,9 @@ canvas {
 
 @media (max-width: 500px) {
     body {
-        min-height: 80vh;
+        min-height: 90vh;
     }
     .canvas-container {
-        height: 70vh;
+        height: 80vh;
     }
 }
